@@ -12,7 +12,7 @@ var checkTime = function () {
         }
         var currentHour = moment().hour();
         $(this).next().removeClass("present past future");
-        if (hour === currentHour) {
+        if (hour == currentHour) {
             $(this).next().addClass("present");
         }
         else if (hour < currentHour) {

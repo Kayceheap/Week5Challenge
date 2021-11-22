@@ -4,15 +4,15 @@ body {
   line-height: 1;
 }
 
-textarea{
+textarea {
+  border: 1px solid blue;
   background: transparent;
-  border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  margin-left: -11px;
   height: 100%;
   width: 100%;
+  padding: 0;
 }
 
 .jumbotron {
