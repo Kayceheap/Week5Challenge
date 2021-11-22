@@ -14,8 +14,18 @@ $(".row").on("click", "p", function (event) {
 })
 
 $(".row").on("click", "button", function (event) {
-var timeKey = ($(event.target).closest(".row").children().first().text());
-var timeText =($(event.target).closest(".row").children().first().next().text());
-console.log(timeText);
-console.log(timeKey);
+    var timeKey = ($(event.target).closest(".row").children().first().text());
+    var timeText = ($(event.target).closest(".row").children().first().next().text());
+    window.localStorage.setItem(timeKey, timeText);
+})
+
+$(document).ready(function () {
+
+
+    $(".time").each(function (event) {
+        var timeKey = ($(this).text());
+        var timeText = window.localStorage.getItem(timeKey);
+        ($(this).next().children().first().text(timeText));
+        console.log(timeText)
+    })
 })
